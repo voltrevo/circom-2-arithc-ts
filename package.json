@@ -1,0 +1,20 @@
+{
+  "name": "circom-2-arithc",
+  "version": "0.0.0",
+  "description": "Library for compiling circom to arithmetic circuits",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["MPC", "multi", "party", "computation", "pse", "cryptography", "circom", "compiler", "arithmetic", "circuit"],
+  "author": "Andrew Morris",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voltrevo/circom-2-arithc-ts.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
