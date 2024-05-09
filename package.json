@@ -4,10 +4,21 @@
   "description": "Library for compiling circom to arithmetic circuits",
   "main": "dist/src/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc",
+    "build": "rm -rf dist && tsx wasm/build.ts && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["MPC", "multi", "party", "computation", "pse", "cryptography", "circom", "compiler", "arithmetic", "circuit"],
+  "keywords": [
+    "MPC",
+    "multi",
+    "party",
+    "computation",
+    "pse",
+    "cryptography",
+    "circom",
+    "compiler",
+    "arithmetic",
+    "circuit"
+  ],
   "author": "Andrew Morris",
   "repository": {
     "type": "git",
@@ -15,6 +26,8 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^20.12.11",
+    "tsx": "^4.9.3",
     "typescript": "^5.4.5"
   }
 }
