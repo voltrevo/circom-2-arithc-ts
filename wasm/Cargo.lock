@@ -170,7 +170,7 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 [[package]]
 name = "circom-2-arithc"
 version = "0.1.0"
-source = "git+https://github.com/namnc/circom-2-arithc#16de04dd88903364d6fab400aea89ea31cb8006e"
+source = "git+https://github.com/namnc/circom-2-arithc?branch=wasm-support#bdadbd2170343f6122070a615989804018c4f0df"
 dependencies = [
  "circom_algebra",
  "clap",
