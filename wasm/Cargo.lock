@@ -204,6 +204,8 @@ dependencies = [
  "circom-2-arithc",
  "getrandom 0.2.15",
  "lalrpop-util",
+ "serde",
+ "serde_json",
  "wasm-bindgen",
  "web-sys",
 ]
