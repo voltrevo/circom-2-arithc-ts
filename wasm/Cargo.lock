@@ -215,7 +215,7 @@ dependencies = [
 [[package]]
 name = "circom_algebra"
 version = "2.1.4"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 dependencies = [
  "constant_tracking",
  "num-bigint-dig",
@@ -240,7 +240,7 @@ dependencies = [
 [[package]]
 name = "code_producers"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 dependencies = [
  "handlebars",
  "lz_fnv",
@@ -277,7 +277,7 @@ checksum = "0b6a852b24ab71dffc585bcb46eaf7959d175cb865a7152e35b348d1b2960422"
 [[package]]
 name = "compiler"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 dependencies = [
  "code_producers",
  "constant_tracking",
@@ -290,12 +290,12 @@ dependencies = [
 [[package]]
 name = "constant_tracking"
 version = "2.0.0"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 
 [[package]]
 name = "constraint_generation"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 dependencies = [
  "ansi_term",
  "circom_algebra",
@@ -312,7 +312,7 @@ dependencies = [
 [[package]]
 name = "constraint_list"
 version = "2.1.8"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 dependencies = [
  "circom_algebra",
  "constraint_writers",
@@ -326,7 +326,7 @@ dependencies = [
 [[package]]
 name = "constraint_writers"
 version = "2.1.8"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 dependencies = [
  "circom_algebra",
  "json",
@@ -361,7 +361,7 @@ dependencies = [
 [[package]]
 name = "dag"
 version = "2.1.8"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 dependencies = [
  "circom_algebra",
  "constraint_list",
@@ -841,7 +841,7 @@ dependencies = [
 [[package]]
 name = "parser"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 dependencies = [
  "lalrpop",
  "lalrpop-util",
@@ -943,7 +943,7 @@ dependencies = [
 [[package]]
 name = "program_structure"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 dependencies = [
  "codespan",
  "codespan-reporting",
@@ -1302,7 +1302,7 @@ dependencies = [
 [[package]]
 name = "type_analysis"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 dependencies = [
  "num-bigint-dig",
  "num-traits",
@@ -1360,7 +1360,7 @@ checksum = "49874b5167b65d7193b8aba1567f5c7d93d001cafc34600cee003eda787e483f"
 [[package]]
 name = "virtual_fs"
 version = "0.1.0"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#70bf3d56a65116b41133ff11122e70589d29bfef"
 
 [[package]]
 name = "wasi"
