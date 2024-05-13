@@ -1,18 +1,26 @@
-import wasmLib from "./src/wasmLib";
+import initWasmLib from "./src/initWasmLib";
 
-const src = `
-    pragma circom 2.0.0;
+async function main() {
+    const src = `
+        pragma circom 2.0.0;
 
-    // Two element sum
-    template sum () {
-        signal input a;
-        signal input b;
-        signal output out;
+        // Two element sum
+        template sum () {
+            signal input a;
+            signal input b;
+            signal output out;
+            
+            out <== a + b;
+        }
         
-        out <== a + b;
-    }
-    
-    component main = sum();
-`;
+        component main = sum();
+    `;
 
-console.log(wasmLib.compile(src));
+    const wasmLib = await initWasmLib();
+
+    const circuit = wasmLib.compile(src);
+
+    console.log(circuit);
+}
+
+main().catch(console.error);
