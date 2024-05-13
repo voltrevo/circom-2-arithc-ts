@@ -170,7 +170,7 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 [[package]]
 name = "circom-2-arithc"
 version = "0.1.0"
-source = "git+https://github.com/namnc/circom-2-arithc?branch=wasm-support#e54ac23efe2c5a7835397022aa55879c4719694d"
+source = "git+https://github.com/namnc/circom-2-arithc?branch=wasm-support#5f530c182e64e25423ed19ff85662c4178480fcb"
 dependencies = [
  "circom_algebra",
  "clap",
@@ -195,8 +195,7 @@ dependencies = [
  "sim-circuit",
  "thiserror",
  "type_analysis",
- "vfs",
- "vfs_utils",
+ "virtual_fs",
 ]
 
 [[package]]
@@ -208,7 +207,7 @@ dependencies = [
  "lalrpop-util",
  "serde",
  "serde_json",
- "vfs",
+ "virtual_fs",
  "wasm-bindgen",
  "web-sys",
 ]
@@ -216,7 +215,7 @@ dependencies = [
 [[package]]
 name = "circom_algebra"
 version = "2.1.4"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 dependencies = [
  "constant_tracking",
  "num-bigint-dig",
@@ -241,14 +240,13 @@ dependencies = [
 [[package]]
 name = "code_producers"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 dependencies = [
  "handlebars",
  "lz_fnv",
  "num-bigint-dig",
  "serde_json",
- "vfs",
- "vfs_utils",
+ "virtual_fs",
 ]
 
 [[package]]
@@ -279,26 +277,25 @@ checksum = "0b6a852b24ab71dffc585bcb46eaf7959d175cb865a7152e35b348d1b2960422"
 [[package]]
 name = "compiler"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 dependencies = [
  "code_producers",
  "constant_tracking",
  "num-bigint-dig",
  "num-traits",
  "program_structure",
- "vfs",
- "vfs_utils",
+ "virtual_fs",
 ]
 
 [[package]]
 name = "constant_tracking"
 version = "2.0.0"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 
 [[package]]
 name = "constraint_generation"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 dependencies = [
  "ansi_term",
  "circom_algebra",
@@ -309,13 +306,13 @@ dependencies = [
  "num-bigint-dig",
  "num-traits",
  "program_structure",
- "vfs",
+ "virtual_fs",
 ]
 
 [[package]]
 name = "constraint_list"
 version = "2.1.8"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 dependencies = [
  "circom_algebra",
  "constraint_writers",
@@ -323,18 +320,17 @@ dependencies = [
  "num_cpus",
  "program_structure",
  "threadpool",
- "vfs",
+ "virtual_fs",
 ]
 
 [[package]]
 name = "constraint_writers"
 version = "2.1.8"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 dependencies = [
  "circom_algebra",
  "json",
- "vfs",
- "vfs_utils",
+ "virtual_fs",
 ]
 
 [[package]]
@@ -365,14 +361,14 @@ dependencies = [
 [[package]]
 name = "dag"
 version = "2.1.8"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 dependencies = [
  "circom_algebra",
  "constraint_list",
  "constraint_writers",
  "json",
  "program_structure",
- "vfs",
+ "virtual_fs",
 ]
 
 [[package]]
@@ -461,18 +457,6 @@ name = "equivalent"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5443807d6dff69373d433ab9ef5378ad8df50ca6298caf15de6e52e24aaf54d5"
-
-[[package]]
-name = "filetime"
-version = "0.2.23"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1ee447700ac8aa0b2f2bd7bc4462ad686ba06baa6727ac149a2d6277f0d240fd"
-dependencies = [
- "cfg-if",
- "libc",
- "redox_syscall 0.4.1",
- "windows-sys",
-]
 
 [[package]]
 name = "fixedbitset"
@@ -711,7 +695,7 @@ checksum = "6c8640c5d730cb13ebd907d8d04b52f55ac9a2eec55b440c8892f40d56c76c1d"
 [[package]]
 name = "mpz-circuits"
 version = "0.1.0"
-source = "git+https://github.com/privacy-scaling-explorations/mpz#cfa42a519ddd936249976ef0d83c7cdc5b8e5d1e"
+source = "git+https://github.com/privacy-scaling-explorations/mpz#da429ceb0578e4c802df214d8be9b8a8faf4ae79"
 dependencies = [
  "bincode",
  "itybity",
@@ -745,7 +729,7 @@ dependencies = [
 [[package]]
 name = "mpz-circuits-macros"
 version = "0.1.0"
-source = "git+https://github.com/privacy-scaling-explorations/mpz#cfa42a519ddd936249976ef0d83c7cdc5b8e5d1e"
+source = "git+https://github.com/privacy-scaling-explorations/mpz#da429ceb0578e4c802df214d8be9b8a8faf4ae79"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -849,7 +833,7 @@ checksum = "1e401f977ab385c9e4e3ab30627d6f26d00e2c73eef317493c4ec6d468726cf8"
 dependencies = [
  "cfg-if",
  "libc",
- "redox_syscall 0.5.1",
+ "redox_syscall",
  "smallvec",
  "windows-targets",
 ]
@@ -857,7 +841,7 @@ dependencies = [
 [[package]]
 name = "parser"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 dependencies = [
  "lalrpop",
  "lalrpop-util",
@@ -868,8 +852,7 @@ dependencies = [
  "rustc-hex",
  "serde",
  "serde_derive",
- "vfs",
- "vfs_utils",
+ "virtual_fs",
 ]
 
 [[package]]
@@ -903,7 +886,7 @@ dependencies = [
  "pest_meta",
  "proc-macro2",
  "quote",
- "syn 2.0.61",
+ "syn 2.0.63",
 ]
 
 [[package]]
@@ -960,7 +943,7 @@ dependencies = [
 [[package]]
 name = "program_structure"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 dependencies = [
  "codespan",
  "codespan-reporting",
@@ -1050,15 +1033,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ca3129af7b92a17112d59ad498c6f81eaf463253766b90396d39ea7a39d6613c"
 dependencies = [
  "rand_core 0.5.1",
-]
-
-[[package]]
-name = "redox_syscall"
-version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4722d768eff46b75989dd134e5c353f0d6296e5aaa3132e776cbdb56be7731aa"
-dependencies = [
- "bitflags 1.3.2",
 ]
 
 [[package]]
@@ -1166,7 +1140,7 @@ checksum = "c5e405930b9796f1c00bee880d03fc7e0bb4b9a11afc776885ffe84320da2865"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.61",
+ "syn 2.0.63",
 ]
 
 [[package]]
@@ -1249,9 +1223,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.61"
+version = "2.0.63"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c993ed8ccba56ae856363b1845da7266a7cb78e1d146c8a32d54b45a8b831fc9"
+checksum = "bf5be731623ca1a1fb7d8be6f261a3be6d3e2337b8a1f97be944d020c8fcb704"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1304,7 +1278,7 @@ checksum = "e2470041c06ec3ac1ab38d0356a6119054dedaea53e12fbefc0de730a1c08524"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.61",
+ "syn 2.0.63",
 ]
 
 [[package]]
@@ -1328,7 +1302,7 @@ dependencies = [
 [[package]]
 name = "type_analysis"
 version = "2.1.9"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 dependencies = [
  "num-bigint-dig",
  "num-traits",
@@ -1384,21 +1358,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "49874b5167b65d7193b8aba1567f5c7d93d001cafc34600cee003eda787e483f"
 
 [[package]]
-name = "vfs"
-version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "654cd097e182a71dbf899178e6b5662c2157dd0b8afd5975de18008f6fc173d1"
-dependencies = [
- "filetime",
-]
-
-[[package]]
-name = "vfs_utils"
+name = "virtual_fs"
 version = "0.1.0"
-source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#5bdfae8a6c4e048d3f01b025beec7619da118e7a"
-dependencies = [
- "vfs",
-]
+source = "git+https://github.com/voltrevo/circom?branch=virtual-fs#a8e909beea3bdfcc682c5d0980507e255c93c684"
 
 [[package]]
 name = "wasi"
@@ -1433,7 +1395,7 @@ dependencies = [
  "once_cell",
  "proc-macro2",
  "quote",
- "syn 2.0.61",
+ "syn 2.0.63",
  "wasm-bindgen-shared",
 ]
 
@@ -1455,7 +1417,7 @@ checksum = "e94f17b526d0a461a191c78ea52bbce64071ed5c04c9ffe424dcb38f74171bb7"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.61",
+ "syn 2.0.63",
  "wasm-bindgen-backend",
  "wasm-bindgen-shared",
 ]
