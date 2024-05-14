@@ -1,0 +1,4 @@
+tests
+wasm
+!wasm/pkg
+*.tgz

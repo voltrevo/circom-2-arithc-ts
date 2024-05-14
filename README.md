@@ -54,7 +54,7 @@ Build with `npm run build`. This will compile the wasm subproject and also
 transpile typescript into javascript. [Rust toolchain](https://rustup.rs/)
 required.
 
-Test with `npm run test`.
+Test with `npm test`.
 
 ## Example Project
 
