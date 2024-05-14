@@ -13,8 +13,10 @@ async function main() {
 
   const wasmBinary = await fs.readFile('./pkg/circom_2_arithc_ts_wasm_bg.wasm');
   const src = `export default '${wasmBinary.toString('base64')}';\n`;
+  await fs.unlink('./pkg/circom_2_arithc_ts_wasm_bg.wasm');
   await fs.writeFile('./pkg/circom_2_arithc_ts_wasm_base64.js', src);
-  await fs.unlink('./pkg/package.json');
+  await fs.unlink('./pkg/.gitignore');
+  await fs.rename('./pkg', '../srcWasm');
 }
 
 async function shell(program: string, args: string[]) {

@@ -1,10 +1,10 @@
 {
   "name": "circom-2-arithc",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Library for compiling circom to arithmetic circuits",
   "main": "dist/src/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsx wasm/build.ts && tsc",
+    "build": "rm -rf dist srcWasm && tsx wasm/build.ts && tsc",
     "test": "mocha --import=tsx tests/**/*.test.ts"
   },
   "keywords": [

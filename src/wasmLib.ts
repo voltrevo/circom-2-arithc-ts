@@ -1,4 +1,4 @@
-import * as bindgen from '../wasm/pkg/circom_2_arithc_ts_wasm.js';
+import * as bindgen from '../srcWasm/circom_2_arithc_ts_wasm';
 
 function base64ToUint8Array(base64: string) {
   var binaryString = atob(base64);
@@ -16,7 +16,7 @@ let lib: typeof bindgen | undefined = undefined;
 export function initWasmLib() {
   promise ??= (async () => {
     const { default: wasmBase64 } = await import(
-      '../wasm/pkg/circom_2_arithc_ts_wasm_base64.js'
+      '../srcWasm/circom_2_arithc_ts_wasm_base64',
     );
 
     bindgen.initSync(base64ToUint8Array(wasmBase64));
