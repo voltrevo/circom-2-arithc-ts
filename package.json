@@ -5,7 +5,7 @@
   "main": "dist/src/index.js",
   "scripts": {
     "build": "rm -rf dist && tsx wasm/build.ts && tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --import=tsx tests/**/*.test.ts"
   },
   "keywords": [
     "MPC",
@@ -26,7 +26,11 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.6",
     "@types/node": "^20.12.11",
+    "chai": "^5.1.1",
+    "mocha": "^10.4.0",
     "tsx": "^4.9.3",
     "typescript": "^5.4.5"
   }

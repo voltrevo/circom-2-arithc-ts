@@ -48,6 +48,14 @@ async function main() {
 main().catch(console.error);
 ```
 
+## Development
+
+Build with `npm run build`. This will compile the wasm subproject and also
+transpile typescript into javascript. [Rust toolchain](https://rustup.rs/)
+required.
+
+Test with `npm run test`.
+
 ## Example Project
 
 For a more complete MPC example in the form of a repository, see
