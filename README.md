@@ -58,5 +58,6 @@ Test with `npm test`.
 
 ## Example Project
 
-For a more complete MPC example in the form of a repository, see
-[mpz-ts-example](https://github.com/voltrevo/mpz-ts-example).
+Web demo using this module: https://voltrevo.github.io/circom-2-arithc-ts-demo.
+
+We are also working towards a [more complete MPC demo](https://github.com/voltrevo/mpz-ts-example), but `mpz-ts` is not yet implemented.
