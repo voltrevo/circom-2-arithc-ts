@@ -1,12 +1,7 @@
 # circom-2-arithc(-ts)
 
-Experimental TypeScript library for compiling circom to arithmetic circuits
-backed by [namnc/circom-2-arithc](https://github.com/namnc/circom-2-arithc).
-
-## Status
-
-This is an **UNIMPLEMENTED** stub module. It exposes the API we are aiming to
-support. It does not work yet.
+TypeScript library for compiling circom to arithmetic circuits backed by
+[namnc/circom-2-arithc](https://github.com/namnc/circom-2-arithc).
 
 ## Usage
 
@@ -25,7 +20,7 @@ async function main() {
     // but how those files find their way into this format depends on your build
     // tool.
 
-    'main.circom': `
+    '/src/main.circom': `
       pragma circom 2.0.0;
 
       template Adder() {
@@ -42,13 +37,12 @@ async function main() {
   const circuit = c2a.Circuit.compile(circuitSrc);
 
   console.log(
-    circuit.eval({
-      a: 3,
-      b: 5,
-    }),
-  ); // { c: 8 }
+    // In future named inputs and outputs should work via
+    // `circuit.eval({ a: 3, b: 5 })`
+    circuit.evalArray(new Uint32Array([3, 5])),
+  ); // [8]
 
-  // For use with mpz-ts, use `circuit.toMpzCircuit()`.
+  // For use with mpz-ts, use `circuit.toMpzCircuit()` (not yet implemented).
 }
 
 main().catch(console.error);

@@ -3,7 +3,7 @@ import * as c2a from "./src/index";
 async function main() {
   await c2a.init();
 
-  const files = {
+  const circuit = c2a.Circuit.compile({
     '/src/main.circom': `
       pragma circom 2.0.0;
 
@@ -18,10 +18,11 @@ async function main() {
 
       component main = sum();
     `
-  };
+  });
 
-  const circuit = c2a.Circuit.compile(files);
-  circuit._debug();
+  const [output] = circuit.evalArray(new Uint32Array([3, 5]));
+
+  console.log(output);
 }
 
 main().catch(console.error);

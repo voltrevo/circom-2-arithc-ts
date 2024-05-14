@@ -7,12 +7,18 @@ export default class Circuit {
     this.#circuitJson = circuitJson;
   }
 
-  _debug() {
-    console.log(this.#circuitJson);
+  toJson() {
+    return JSON.parse(this.#circuitJson);
   }
 
   eval(_input: Record<string, unknown>): Record<string, unknown> {
-    throw new Error('Not implemented');
+    throw new Error(
+      'Not implemented: named inputs and outputs (use evalArray)'
+    );
+  }
+
+  evalArray(inputs: Uint32Array): Uint32Array {
+    return getWasmLib().eval_(this.#circuitJson, inputs);
   }
 
   toMpzCircuit(): { mpzCircuitData(): Uint8Array } {
