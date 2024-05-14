@@ -1,4 +1,4 @@
-import initWasmLib from "./src/initWasmLib";
+import { initWasmLib } from "./src/wasmLib";
 
 async function main() {
     const src = `

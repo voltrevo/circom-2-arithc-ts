@@ -17,34 +17,41 @@ npm install circom-2-arithc
 ```ts
 import * as c2a from 'circom-2-arithc';
 
-const circuitSrc = {
-  // In a real project you should be able to include these as regular files, but
-  // how those files find their way into this format depends on your build tool.
+async function main() {
+  await c2a.init();
 
-  'main.circom': `
-    pragma circom 2.0.0;
+  const circuitSrc = {
+    // In a real project you should be able to include these as regular files,
+    // but how those files find their way into this format depends on your build
+    // tool.
 
-    template Adder() {
-        signal input a, b;
-        signal output c;
+    'main.circom': `
+      pragma circom 2.0.0;
 
-        c <== a + b;
-    }
+      template Adder() {
+          signal input a, b;
+          signal output c;
 
-    component main = Adder();
-  `,
-};
+          c <== a + b;
+      }
 
-const circuit = c2a.Circuit.compile(circuitSrc);
+      component main = Adder();
+    `,
+  };
 
-console.log(
-  circuit.eval({
-    a: 3,
-    b: 5,
-  }),
-); // { c: 8 }
+  const circuit = c2a.Circuit.compile(circuitSrc);
 
-// For use with mpz-ts, use `circuit.toMpzCircuit()`.
+  console.log(
+    circuit.eval({
+      a: 3,
+      b: 5,
+    }),
+  ); // { c: 8 }
+
+  // For use with mpz-ts, use `circuit.toMpzCircuit()`.
+}
+
+main().catch(console.error);
 ```
 
 ## Example Project
